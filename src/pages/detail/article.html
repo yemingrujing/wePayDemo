@@ -1,0 +1,47 @@
+<style type="text/css">
+
+    .personal-info{
+        margin-top: 0;
+        margin-bottom: .2rem;
+    }
+    .personal-info .bui-btn {
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+    }
+    .personal-info .icon {
+        margin-right: 0;
+    }
+    .contact-list{
+        border-top: none;
+        margin-bottom: .2rem;
+        padding: 0 0.2rem;
+        background-color: #ffffff;
+    }
+    .contact-list .bui-btn{
+        padding-left: 0;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+    }
+    .contact-list li:last-child{
+        border-bottom: none;
+    }
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">订单详情</div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+    </header>
+    <main>
+        <ul class="bui-list personal-info" id="order_detail_head"></ul>
+        <ul class="bui-list contact-list" id="order_detail_body"></ul>
+        <div class="container-xy">
+            <div id="order_pay" class="bui-btn round primary">支付</div>
+        </div>
+    </main>
+</div>
