@@ -1,11 +1,11 @@
 {
   "distServer": {
     "livereload": true,
-    "port": 5669
+    "port": 5414
   },
   "devServer": {
     "livereload": false,
-    "port": 5667
+    "port": 5412
   },
   "qrcode": "/index.html",
   "ignored": [

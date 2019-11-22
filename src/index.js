@@ -34,11 +34,11 @@ bui.ready(function() {
                 return false;
             }
         }
-    })
+    });
 
     // 绑定事件
     bind();
-})
+});
 
 /**
  * [bind 绑定页面事件]

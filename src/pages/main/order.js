@@ -16,7 +16,7 @@ loader.define(function(require, exports, module) {
         tab.lock();
         var uiList = bui.list({
             id: "#scrollList1",
-            url: "http://w2n1075050.imwork.net:52812/activity/v2/order/list",
+            url: "http://192.168.168.5:9091/activity/v2/order/list",
             pageSize: 10, // 当pageSize 小于返回的数据大小的时候,则认为是最后一页,接口返回的数据最好能返回空数组,而不是null
             data: {},
             //如果分页的字段名不一样,通过field重新定义
@@ -83,7 +83,7 @@ loader.define(function(require, exports, module) {
 
         var uiList = bui.list({
             id: "#scrollList2",
-            url: "http://w2n1075050.imwork.net:52812/activity/v2/order/list",
+            url: "http://192.168.168.5:9091/activity/v2/order/list",
             pageSize: 10, // 当pageSize 小于返回的数据大小的时候,则认为是最后一页,接口返回的数据最好能返回空数组,而不是null
             data: {},
             //如果分页的字段名不一样,通过field重新定义

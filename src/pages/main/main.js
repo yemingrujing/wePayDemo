@@ -8,6 +8,7 @@ loader.define(function(require, exports, module) {
     var pageview = {};
 
     pageview.bind = function () {
+        console.log(storage.get("login_token"));
         // 手机号,帐号是同个样式名, 获取值的时候,取的是最后一个focus的值
         var userInput = bui.input({
             id: ".user-input",
@@ -48,12 +49,12 @@ loader.define(function(require, exports, module) {
                 "content": '<div class="bui-box-center"><div><i class="icon-successfill success"></i><h3>登录失败</h3><p>用户名或密码错误</p></div></div>',
                 "buttons": [{ name: "关闭", className: "primary-reverse" }]
             });
-        })
+        });
 
         //提交
         var loginBtn = bui.btn({id: "#login", beforeCallback: function(e) {
                 bui.ajax({
-                    url: "http://w2n1075050.imwork.net:52812/login",
+                    url: "http://192.168.168.5:9091/login",
                     method: "POST",
                     async: false,
                     contentType: "application/x-www-form-urlencoded",
@@ -64,7 +65,7 @@ loader.define(function(require, exports, module) {
                     } else {
                         bui.config.ajax = {
                             headers: {"login_token": res.data.token},
-                        }
+                        };
                         $('#login').removeAttr("disabled");
                         userinfo = res.data;
                         storage.set("login_token", res.data.token);
@@ -91,4 +92,4 @@ loader.define(function(require, exports, module) {
 
     // 输出模块
     return pageview;
-})
+});

@@ -12,7 +12,7 @@ loader.define(function(require, exports, module) {
         })
 
         bui.ajax({
-            url: "http://w2n1075050.imwork.net:52812/activity/v2/order/detail/" + activityOrderId ,
+            url: "http://192.168.168.5:9091/activity/v2/order/detail/" + activityOrderId ,
             method: "GET",
             async: false,
             data: ""
@@ -75,14 +75,14 @@ loader.define(function(require, exports, module) {
             var amountTotal = $('#amountTotal').text();
             var orderCode = $('#orderCode').text();
             bui.ajax({
-                url: "http://w2n1075050.imwork.net:52812/app/wechat/order/unifiedorder" ,
+                url: "http://192.168.168.5:9091/app/wechat/order/unifiedorder" ,
                 method: "POST",
                 contentType: "application/x-www-form-urlencoded",
                 async: false,
-                data: "orderCode=" + orderCode + "&subject=微信支付&totalFee=" + amountTotal + "&passbackParams=1"
+                data: "orderCode=" + orderCode + "&subject=微信支付&totalFee=" + amountTotal + "&orderType=1&type=WAP&openId="
             }).then(function(res){
                 console.log(res);
-                window.location = res.data.mweb_url;
+                window.location.href = JSON.parse(res.data).mweb_url;
             }, function(res,status){
                 console.log(status);
                 return false;

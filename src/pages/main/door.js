@@ -23,16 +23,16 @@ loader.define(function(require, exports, module) {
         tab.on("to", function(index) {
             switch (index) {
                 case 0:
-                    loader.require(["pages/main/home"])
+                    loader.require(["pages/main/home"]);
                     break;
                 case 1:
-                    loader.require(["pages/main/order"])
+                    loader.require(["pages/main/order"]);
                     break;
                 case 2:
-                    loader.require(["pages/main/message"])
+                    loader.require(["pages/main/message"]);
                     break;
                 case 3:
-                    loader.require(["pages/main/mine"])
+                    loader.require(["pages/main/mine"]);
                     break;
             }
 
